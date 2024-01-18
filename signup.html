@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - GameThrift</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your additional styles for the signup page here */
+        body {
+            background-image: url('images/GFG\ \(2\).jpg'); /* Replace with the path to your image */
+            background-size: auto;
+            background-position: center;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        section {
+            text-align: center;
+        }
+
+        form {
+            max-width:  400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px; /* Adjust the width as needed */
+            text-align: left;
+            margin-bottom: 5px;    
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 150px;
+            margin-top: 10px; /* Add some spacing between the input and button */
+            margin-left: 135px;
+            
+        }
+
+       
+
+        /* Your existing styles here */
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Sign Up</h2>
+        <!-- Your signup form content here -->
+        <form id="signupForm" onsubmit="return signupUser()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="confirm-password">Confirm:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+
+            <button type="submit" class="menu-btn">create</button>
+            <button type="submit"><a href="Index.Html" class="menu-btn">Back To Home</a></button>
+
+        </form>
+    </section>
+
+    <script>
+        function signupUser() {
+            // Your signup logic here
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirm-password').value;
+
+            // Example: Check if the signup is successful
+            if (password === confirmPassword) {
+                alert('Sign Up successful!');
+                window.location.href = 'index.html'; // Redirect to index.html
+                return false; // Prevent the form from submitting
+            } else {
+                alert('Password and Confirm Password do not match. Please try again.');
+                return false; // Prevent the form from submitting
+            }
+        }
+        // Add any additional scripts as needed
+    </script>
+</body>
+</html>

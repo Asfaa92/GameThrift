@@ -1,0 +1,207 @@
+<!-- news.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameThrift News</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 3px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            transition: top 0.3s; /* Add smooth transition effect */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;        
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu-btn {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 20px;
+            border: inset;
+            cursor: pointer;
+            transition: opacity 0.3s; /* Add smooth transition effect for opacity */
+        }
+
+        .game-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .game-card {
+            background-color: #444;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            width: auto;
+        }
+
+        .search-bar {
+            margin: 10px;
+            padding: 12px;
+            width: 500px; /* Adjust the width as needed */
+            height: 10px; /* Adjust the height as needed */
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .see-all {
+            background-color: #555;
+            cursor: pointer;
+        }
+
+        article {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        h2 {
+            color: #ffcc00; /* Yellow color for headings */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .read-more-btn {
+            background-color: #ffcc00; /* Yellow color for the button */
+            color: #222; /* Dark color for text */
+            padding: 8px 16px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .account-logo img {
+            width: 45px; /* Set the desired width for your account logo */
+            height: auto;
+            cursor: pointer;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/GameThrift_Logo-removebg-preview.png" alt="GameThrift Logo" style="width: 350px; height: 350px;">
+        <h1>GameThrift: Unlocking Fun, Saving Coins!</h1>
+        
+        <input type="text" class="search-bar" placeholder="Search">
+    </header>
+
+    <nav>
+        <a href="Index.Html" class="menu-btn">Toko</a>
+        <a href="Perpustakaan.html" class="menu-btn">Perpustakaan</a>
+        <a href="savings.html" class="menu-btn">Tabungan</a>
+        <a href="news.html" class="menu-btn">Berita</a>
+        <a href="premium.html" class="menu-btn">Premium</a>
+        <a href="community.html" class="menu-btn">Komunitas</a>
+        <a href="chat.html" class="menu-btn">Obrolan</a>
+        <a href="login.html" class="menu-btn">Login/Sign Up</a>
+        <div class="account-logo">
+            <img src="images/4-removebg-preview-removebg-preview.png" alt="Account Logo">
+        </div>
+    </nav>
+
+    <script>
+
+        window.onscroll = function() { scrollFunction(); };
+        
+        function scrollFunction() {
+            var navBar = document.querySelector("nav");
+            var menuButtons = document.querySelectorAll(".menu-btn");
+        
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                navBar.style.top = "-50px"; /* Adjust the value as needed */
+                menuButtons.forEach(function(button) {
+                    button.style.opacity = "0";
+                });
+            } else {
+                navBar.style.top = "0";
+                menuButtons.forEach(function(button) {
+                    button.style.opacity = "1";
+                });
+            }
+        }
+        
+            </script>
+        
+
+    <section>
+        <h2>Latest Gaming News</h2>
+
+        <article>
+            <img src="images/screenshot20240106 (1).png" alt="Game Release">
+            <h2>Exciting Game Release Announced</h2>
+            <p>Lethal Company is A co-op horror about scavenging at abandoned moons to sell scrap to the Company...</p>
+            <p><em>Published on 24 Oct, 2023</em></p>
+            <a href="news_detail.html" class="read-more-btn">Read More</a>
+        </article>
+
+        <article>
+            <img src="images/screenshot20240105 (3).png" alt="Game Update">
+            <h2>New Updates for Popular Online Game</h2>
+            <p>In the highly anticipated sequel to the record-breaking Modern Warfare II, Captain Price and Task Force 141 confront the ultimate threat...</p>
+            <p><em>Published on 28 Oct, 2022</em></p>
+            <a href="news_detail.html" class="read-more-btn">Read More</a>
+        </article>
+
+        <article>
+            <img src="images/GameThrift Logo.png" alt="Game Update">
+            <h2>THE LAUNCHING OF GAMETHRIFT</h2>
+            <p>In a groundbreaking move for gamers worldwide, GameThrift has officially launched, offering a unique platform for purchasing games at affordable prices. Developed with the gaming community in mind, GameThrift aims to redefine the gaming experience by providing a budget-friendly alternative for enthusiasts of all levels...</p>
+            <p><em>Published on 19 Dec, 2023</em></p>
+            <a href="news_detail.html" class="read-more-btn">Read More</a>
+        </article>
+
+        <!-- Add more articles as needed -->
+
+    </section>
+
+    <script>
+        // JavaScript functions for the news page
+        // Add any additional scripts as needed
+    </script>
+</body>
+</html>

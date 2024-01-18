@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameThrift</title>
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 3px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            transition: top 0.3s; /* Add smooth transition effect */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;        
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu-btn {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 20px;
+            border: inset;
+            cursor: pointer;
+            transition: opacity 0.3s; /* Add smooth transition effect for opacity */
+
+        }
+
+        .game-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .game-card {
+            background-color: #444;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            width: auto;
+        }
+
+        .search-bar {
+            margin: 10px;
+            padding: 12px;
+            width: 500px; /* Adjust the width as needed */
+            height: 10px; /* Adjust the height as needed */
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .see-all {
+            background-color: #555555;
+            cursor: pointer;
+        }
+        .discuss-img {
+            background-color: #222;
+            cursor: pointer;
+        }
+
+        .account-logo img {
+            width: 45px; /* Set the desired width for your account logo */
+            height: auto;
+            cursor: pointer;
+
+        }
+
+        .community-post {
+            background-color: #333;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .post-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .post-content {
+            font-size: 16px;
+            cursor: pointer;
+
+        }
+
+        .post-image {
+            width: 100px;
+            height: 140px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .buy-btn {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 20px;
+            border: inset;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+            <img src="images/GameThrift_Logo-removebg-preview.png" alt="GameThrift Logo" style="width: 350px; height: 350px;">
+        <h1>GameThrift: Unlocking Fun, Saving Coins!</h1>
+        
+        <input type="text" class="search-bar" placeholder="Search">
+    </header>
+    
+    <section>
+        <h2>Welcome to the GameThrift Community. Let's Discuss Something!</h2>
+        <button class="see-all">View More</button>
+        <div class="game-section">
+            <div class="game-card">
+                <img src="images/medcom-gow-6188ca3606310e48972bea32.jpg" alt="Game 1" style="width: 244.8px; height: 141.6px;">
+                <h3>God Of War</h3>
+                <p></p>
+                <button class="buy-btn">Discuss</button>
+            </div>
+            <div class="game-card">
+                <img src="images/screenshot202401067.png" alt="Game 1" style="width: 244.8px; height: 141.6px;">
+                <h3>Apex Legend</h3>
+                <p></p>
+                <button class="buy-btn">Discuss</button>
+            </div>
+            <div class="game-card">
+                <img src="images/screenshot20240105.png" alt="Game 1" style="width: 244.8px; height: 141.6px;">
+                <h3>Baldur's Gate 3</h3>
+                <p></p>
+                <button class="buy-btn">Discuss</button>
+            </div>
+            <div class="game-card">
+                <img src="images/screenshot20240105 (4).png" alt="Game 1" style="width: 244.8px; height: 141.6px;">
+                <h3>Cyberpunk 2077</h3>
+                <p></p>
+                <button class="buy-btn">Discuss</button>
+            </div>
+            <div class="game-card">
+                <img src="images/screenshot20240105 (3).png" alt="Game 1" style="width: 244.8px; height: 141.6px;">
+                <h3>Call of Duty®</h3>
+                <p></p>
+                <button class="buy-btn">Discuss</button>
+            <!-- Add more game cards as needed -->
+        </div>
+    </section>
+    <nav>
+        <a href="Index.Html" class="menu-btn">Toko</a>
+        <a href="Perpustakaan.html" class="menu-btn">Perpustakaan</a>
+        <a href="savings.html" class="menu-btn">Tabungan</a>
+        <a href="news.html" class="menu-btn">Berita</a>
+        <a href="premium.html" class="menu-btn">Premium</a>
+        <a href="community.html" class="menu-btn">Komunitas</a>
+        <a href="chat.html" class="menu-btn">Obrolan</a>
+        <a href="login.html" class="menu-btn">Login/Sign Up</a>
+        <div class="account-logo">
+            <img src="images/4-removebg-preview-removebg-preview.png" alt="Account Logo">
+        </div>
+    </nav>
+
+    <script>
+
+window.onscroll = function() { scrollFunction(); };
+
+function scrollFunction() {
+    var navBar = document.querySelector("nav");
+    var menuButtons = document.querySelectorAll(".menu-btn");
+
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        navBar.style.top = "-50px"; /* Adjust the value as needed */
+        menuButtons.forEach(function(button) {
+            button.style.opacity = "0";
+        });
+    } else {
+        navBar.style.top = "0";
+        menuButtons.forEach(function(button) {
+            button.style.opacity = "1";
+        });
+    }
+}
+
+    </script>
+
+<section>
+        <h2>Sneak Peek!</h2>
+        <button class="see-all">View More</button>
+        <div class="community-post">
+            <div>
+                <button class="discuss-img"><img src="images/screenshot202401069.png" alt="Discussion Image" class="post-image"></button>
+            </div>
+            <div class="post-content">
+                <h3 class="post-title">Hogwarts Legacy</h3>
+                <p>WizardMaster21: Hey, have you guys checked out the latest info on Hogwarts Legacy?
+
+                    QuidditchChamp94: Absolutely! The gameplay trailers look stunning. I can't wait to explore the Wizarding World.
+                    
+                    PotionMixer77: The magical creatures and spells they showcased are mind-blowing. It's like being a real wizard!
+                    
+                    WizardMaster21: And the open-world concept? Hogwarts and beyond - it's a dream come true for Potterheads.
+                    
+                    QuidditchChamp94: I heard you can choose your house, attend classes, and even interact with iconic characters. Talk about immersion!
+                    
+                    PotionMixer77: I'm already planning my magical creature collection. The possibilities seem endless.
+                    
+                    WizardMaster21: The storyline set in the 1800s sounds intriguing. Exploring the wizarding world's history is going to be epic.
+                    
+                    QuidditchChamp94: I hope they add some challenging Quidditch matches. Flying on a broomstick in an open-world setting? Count me in!...</p>
+            </div>
+        </div>
+
+        <div class="community-post">
+            <div>
+                <button class="discuss-img"><img src="images/rdr 2.png" alt="Discussion Image" class="post-image"></button>
+            </div>
+            <div class="post-content">
+                <h3 class="post-title">RDR 2</h3>
+                <p>xXGamerProXx: Hey guys, have you tried the new Red Dead Redemption 2 update?
+                    LegendarySniper: Yeah, it's pretty awesome! They added a bunch of new missions and improved the graphics.
+                    StealthNinja83: The attention to detail is insane. I spent like an hour just exploring the saloon in Valentine.
+                    xXGamerProXx: Right? The game world feels so alive. And the landscapes are breathtaking.
+                    LegendarySniper: Did you guys discover the hidden Easter eggs? I found a mysterious cabin in the woods with a cool backstory...
+            </div>
+        </div>
+
+    </section>
+
+<footer>
+    <p>&copy; 2024 Gamers For Gamers. All rights reserved.</p>
+    <img src="images/screenshot20240106-removebg-preview.png" style="width: 165px; height: 75px;">
+    <p>Ceo: Muneeb.   Coo: Zafran.  Cto: Tamam,Rio.  Cfo: Vesya.  Cmo: Widia.  Chro: Suci.</p>
+    <a href="Terms of Services.">Terms of Services.<a href="Terms of Services."> Privacy Policy.<a href="Terms of Services."> Refund Policy.</a>
+    <p>Thank You For All The user Whom still Loyal To Us</p>
+</footer>
+</body>
+</html>

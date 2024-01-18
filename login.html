@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - GameThrift</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your additional styles for the login page here */
+        body {
+            background-image: url('images/GFG\ \(2\).jpg'); /* Replace with the path to your image */
+            background-size: auto;
+            background-position: center;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        section {
+            text-align: center;
+        }
+
+        form {
+            max-width: 300PX;
+            margin: AUTO;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px; /* Adjust the width as needed */
+            text-align: left;
+            margin-bottom: 5px;    
+        }
+        
+
+        /* Your existing styles here */
+    </style>
+</head>
+<body>
+    <nav>
+        <!-- ... your existing buttons ... -->
+    </nav>
+
+    <section>
+        <h2>Login</h2>
+        <!-- Your login form content here -->
+        <form id="loginForm" onsubmit="return loginUser()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="menu-btn">Login</a></button>
+            <button type="submit"><a href="signup.html" class="menu-btn">Sign Up</a></button>
+            <button type="submit"><a href="Index.Html" class="menu-btn">Back To Home</a></button>    
+        </form>
+    </section>
+
+    <script>
+         function loginUser() {
+            // Your login logic here
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Example: Check if the login is successful
+            if (username === 'asfaa' && password === 'tamam') {
+                alert('Login successful!');
+                window.location.href = 'index.html'; // Redirect to index.html
+                return false; // Prevent the form from submitting
+            } else {
+                alert('Login failed. Please check your credentials.');
+                return false; // Prevent the form from submitting
+            }
+        }
+        // JavaScript functions for the login page
+        // Add any additional scripts as needed
+    </script>
+</body>
+</html>

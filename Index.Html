@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameThrift</title>
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 3px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            transition: top 0.3s; /* Add smooth transition effect */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;        
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .menu-btn {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 20px;
+            border: inset;
+            cursor: pointer;
+            transition: opacity 0.3s; /* Add smooth transition effect for opacity */
+
+        }
+
+        .game-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .game-card {
+            background-color: #444;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            width: auto;
+        }
+
+        .search-bar {
+            margin: 10px;
+            padding: 12px;
+            width: 500px; /* Adjust the width as needed */
+            height: 10px; /* Adjust the height as needed */
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .see-all {
+            background-color: #555;
+            cursor: pointer;
+        }
+
+        .account-logo img {
+            width: 45px; /* Set the desired width for your account logo */
+            height: auto;
+            cursor: pointer;
+        }
+
+        .buy-btn {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 20px;
+            border: inset;
+            cursor: pointer;
+        }
+        
+        footer {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/GameThrift_Logo-removebg-preview.png" alt="GameThrift Logo" style="width: 350px; height: 350px;">
+        <h1>GameThrift: Unlocking Fun, Saving Coins!</h1>
+        
+        <input type="text" class="search-bar" placeholder="Search">
+    </header>
+
+    <nav>
+        <a href="Index.Html" class="menu-btn">Toko</a>
+        <a href="Perpustakaan.html" class="menu-btn">Perpustakaan</a>
+        <a href="savings.html" class="menu-btn">Tabungan</a>
+        <a href="news.html" class="menu-btn">Berita</a>
+        <a href="premium.html" class="menu-btn">Premium</a>
+        <a href="community.html" class="menu-btn">Komunitas</a>
+        <a href="chat.html" class="menu-btn">Obrolan</a>
+        <a href="login.html" class="menu-btn">Login/Sign Up</a>
+        <div class="account-logo">
+            <img src="images/4-removebg-preview-removebg-preview.png" alt="Account Logo">
+        </div>
+    </nav>
+
+    <script>
+
+window.onscroll = function() { scrollFunction(); };
+
+function scrollFunction() {
+    var navBar = document.querySelector("nav");
+    var menuButtons = document.querySelectorAll(".menu-btn");
+
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        navBar.style.top = "-50px"; /* Adjust the value as needed */
+        menuButtons.forEach(function(button) {
+            button.style.opacity = "0";
+        });
+    } else {
+        navBar.style.top = "0";
+        menuButtons.forEach(function(button) {
+            button.style.opacity = "1";
+        });
+    }
+}
+
+    </script>
+
+    <section>
+        <h2>Buy Games</h2>
+        <button class="see-all">View More</button>
+        <div class="game-section">
+            <div class="game-card">
+                <img src="images/screenshot20240105.png" alt="Game 1" style="width: 244.8px; height: 141.6px;">
+                <h3>Baldur's Gate 3</h3>
+                <p></p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="game-card">
+                <img src="images/screenshot20240105 (4).png" alt="Game 1" style="width: 244.8px; height: 141.6px;">
+                <h3>Cyberpunk 2077</h3>
+                <p></p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="game-card">
+                <img src="images/screenshot20240105 (3).png" alt="Game 1" style="width: 244.8px; height: 141.6px;">
+                <h3>Call of Duty®</h3>
+                <p></p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="game-card">
+                <img src="images/screenshot202401067.png" alt="Game 1" style="width: 244.8px; height: 141.6px;">
+                <h3>Apex Legend</h3>
+                <p></p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="game-card">
+                <img src="images/medcom-gow-6188ca3606310e48972bea32.jpg" alt="Game 1" style="width: 244.8px; height: 141.6px;">
+                <h3>God Of War</h3>
+                <p></p>
+                <button class="buy-btn">Buy Now</button>
+            <!-- Add more game cards as needed -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Discount and free Games</h2>
+        <button class="see-all">View More</button>
+        <div class="game-section">
+            <!-- Add discounted game cards with images and details here -->
+            <div class="game-card">
+                <img src="images/Screenshot 2023-12-08 195058.jpg" alt="Discounted Game 1" style="width: 492px; height: 280.8px;">
+                <h3>PUBG</h3>
+                <p>Free To Play</p>
+                <button class="buy-btn">Play Now</button>
+            </div>
+            <div class="game-card">
+                <img src="images/screenshot20240106.png" alt="Discounted Game 1" style="width: 492px; height: 280.8px;">
+                <h3>Red Dead Redemption 2</h3>
+                <p>From: <s>Rp.700.000</s> Become: Rp.250.000</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="game-card">
+                <img src="images/screenshot20240106 (1).png" alt="Discounted Game 1" style="width: 492px; height: 280.8px;">
+                <h3>Lethal Company</h3>
+                <p>Free To Play.</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="game-card">
+                <img src="images/screenshot202401061.png" alt="Discounted Game 1" style="width: 492px; height: 280.8px;">
+                <h3>Genshin Impact</h3>
+                <p>Free To Play</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="game-card">
+                <img src="images/FF7R-Thumb-1.jpg" alt="Discounted Game 1" style="width: 492px; height: 280.8px;">
+                <h3>Final Fantasy 7 Remake</h3>
+                <p>From: <s>Rp.560.000</s> Become: Rp.300.000</p>
+                <button class="buy-btn">Buy Now</button>
+            <!-- Add more discounted game cards as needed -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Live Streaming</h2>
+        <h3>coming soon.</h3>
+        <!-- Add live streaming content here -->
+    </section>
+
+    <section>
+        <h2>Featured and Recommended Games</h2>
+        <button class="see-all">View More</button>
+        <div class="game-section">
+            <!-- Add featured game cards with images and details here -->
+            <div class="game-card">
+                <img src="images/screenshot202401069.png" alt="Featured Game 1" style="width: 210px; height: 281px;">
+                <h3>Hogwarts Legacy</h3>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="game-card">
+                <img src="images/tlos.png" alt="Featured Game 1" style="width: 210px; height: 281px;">
+                <h3>The Last Of Us</h3>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="game-card">
+                <img src="images/dbd.png" alt="Featured Game 1" style="width: 210px; height: 281px;">
+                <h3>Dead By Daylight</h3>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="game-card">
+                <img src="images/mk 11.png" alt="Featured Game 1" style="width: 210px; height: 281px;">
+                <h3>Mortal Kombat 1</h3>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="game-card">
+                <img src="images/rdr 2.png" alt="Featured Game 1" style="width: 210px; height: 281px;">
+                <h3>Read Dead Redemption 2</h3>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="game-card">
+                <img src="images/pydy 3.png" alt="Featured Game 1" style="width: 210px; height: 281px;">
+                <h3>Payday 3</h3>
+                <button class="buy-btn">Buy Now</button>
+            <!-- Add more featured game cards as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Gamers For Gamers. All rights reserved.</p>
+        <img src="images/screenshot20240106-removebg-preview.png" style="width: 165px; height: 75px;">
+        <p>Ceo: Muneeb.   Coo: Zafran.  Cto: Tamam,Rio.  Cfo: Vesya.  Cmo: Widia.  Chro: Suci.</p>
+        <a href="Terms of Services.">Terms of Services.<a href="Terms of Services."> Privacy Policy.<a href="Terms of Services."> Refund Policy.</a>
+        <p>Thank You For All The user Whom still Loyal To Us</p>
+    </footer>
+
+</body>
+</html>

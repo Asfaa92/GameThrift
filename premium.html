@@ -1,0 +1,245 @@
+<!-- premium.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Subscriptions - GameThrift</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your additional styles for the premium page here */
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 3px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            transition: top 0.3s; /* Add smooth transition effect */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;        
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu-btn {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 20px;
+            border: inset;
+            cursor: pointer;
+            transition: opacity 0.3s; /* Add smooth transition effect for opacity */
+        }
+
+        .game-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .game-card {
+            background-color: #444;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            width: auto;
+        }
+
+        .search-bar {
+            margin: 10px;
+            padding: 12px;
+            width: 500px; /* Adjust the width as needed */
+            height: 10px; /* Adjust the height as needed */
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .see-all {
+            background-color: #555;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #ffffff; /* Yellow color for headings */
+        }
+
+          .subscription-tier {
+           margin: 20px;
+           padding: 20px;
+           background-color: #333;
+           border-radius: 10px;
+           display: flex;
+           flex-direction: row;
+           align-items: center;
+           justify-content: flex-start;
+        }
+
+        .subscription-tier h3 {
+            color: #ffffff; /* Yellow color for tier names */
+        }
+
+        .subscribe-btn {
+            background-color: #070111; /* Dark blue color for the button */
+            color: #fff; /* White color for text */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .account-logo img {
+            width: 45px; /* Set the desired width for your account logo */
+            height: auto;
+            cursor: pointer;
+
+        }
+
+        .tier-logo {
+        width: 70px; /* Set the desired width for your tier logos */
+        height: auto;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+        }
+
+        .tier-content {
+        flex: 1;
+    }
+
+
+        /* Your existing styles here */
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/GameThrift_Logo-removebg-preview.png" alt="GameThrift Logo" style="width: 350px; height: 350px;">
+        <h1>GameThrift: Unlocking Fun, Saving Coins!</h1>
+        
+        <input type="text" class="search-bar" placeholder="Search">
+    </header>
+
+    <nav>
+        <a href="Index.Html" class="menu-btn">Toko</a>
+        <a href="Perpustakaan.html" class="menu-btn">Perpustakaan</a>
+        <a href="savings.html" class="menu-btn">Tabungan</a>
+        <a href="news.html" class="menu-btn">Berita</a>
+        <a href="premium.html" class="menu-btn">Premium</a>
+        <a href="community.html" class="menu-btn">Komunitas</a>
+        <a href="chat.html" class="menu-btn">Obrolan</a>
+        <a href="login.html" class="menu-btn">Login/Sign Up</a>
+        <div class="account-logo">
+            <img src="images/4-removebg-preview-removebg-preview.png" alt="Account Logo">
+        </div>
+    </nav>
+
+    <script>
+
+        window.onscroll = function() { scrollFunction(); };
+        
+        function scrollFunction() {
+            var navBar = document.querySelector("nav");
+            var menuButtons = document.querySelectorAll(".menu-btn");
+        
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                navBar.style.top = "-50px"; /* Adjust the value as needed */
+                menuButtons.forEach(function(button) {
+                    button.style.opacity = "0";
+                });
+            } else {
+                navBar.style.top = "0";
+                menuButtons.forEach(function(button) {
+                    button.style.opacity = "1";
+                });
+            }
+        }
+        
+            </script>
+                    
+<section>
+    <h2>Premium Subscriptions</h2>
+
+    <div class="subscription-tier">
+        <img src="images/1-removebg-preview-removebg-preview.png" alt="Tier 1 Logo" class="tier-logo">
+        <div class="tier-content">
+            <h3>Tier 1: Elite Tier</h3>
+            <p>Unlock basic premium features</p>
+            <p>Price: Rp 30.000</p>
+            <button class="subscribe-btn">Subscribe</button>
+        </div>
+    </div>
+
+    <div class="subscription-tier">
+        <img src="images/2-removebg-preview__1_-removebg-preview.png" alt="Tier 2 Logo" class="tier-logo">
+        <div class="tier-content">
+            <h3>Tier 2: Exclusive Tier</h3>
+            <p>Access to exclusive content and features</p>
+            <p>Price: Rp 60.000</p>
+            <button class="subscribe-btn">Subscribe</button>
+        </div>
+    </div>
+
+    <div class="subscription-tier">
+        <img src="images/3-removebg-preview-removebg-preview.png" alt="Tier 3 Logo" class="tier-logo">
+        <div class="tier-content">
+            <h3>Tier 3: Prestige Tier</h3>
+            <p>Premium benefits with added prestige</p>
+            <p>Price: Rp 120.000</p>
+            <button class="subscribe-btn">Subscribe</button>
+        </div>
+    </div>
+
+    <div class="subscription-tier">
+        <img src="images/Desain_tanpa_judul-removebg-preview.png" alt="Tier 4 Logo" class="tier-logo">
+        <div class="tier-content">
+            <h3>Tier 4: Ultimate Tier</h3>
+            <p>Unlimited access to all premium features</p>
+            <p>Price: Rp 240.000</p>
+            <button class="subscribe-btn">Subscribe</button>
+        </div>
+    </div>
+
+    <div class="subscription-tier">
+        <img src="images/4-removebg-preview-removebg-preview.png" alt="Tier 5 Logo" class="tier-logo">
+        <div class="tier-content">
+            <h3>Tier 5: VIP Tier</h3>
+            <p>Exclusive VIP privileges and benefits</p>
+            <p>Price: Rp 500.000</p>
+            <button class="subscribe-btn">Subscribe</button>
+        </div>
+    </div>
+</section>
+
+    <script>
+        // JavaScript functions for the premium page
+        // Add any additional scripts as needed
+    </script>
+</body>
+</html>
